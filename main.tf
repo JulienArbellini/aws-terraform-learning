@@ -10,7 +10,10 @@ resource "aws_instance" "my_server" {
 
   user_data = file("user_data.sh")
 
-  tags = {
-    Name = "terraform-test"
-  }
+  tags = merge(
+    local.common_tags,
+    {
+      Name = "nginx-server-${var.environment}"
+    }
+  )
 }
