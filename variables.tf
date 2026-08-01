@@ -12,3 +12,8 @@ variable "environment" {
   description = "Environment name"
   type        = string
 }
+
+variable "my_ip" {
+  description = "IP publique de mon poste"
+  type        = string
+}

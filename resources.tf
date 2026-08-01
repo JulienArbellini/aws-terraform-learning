@@ -9,7 +9,7 @@ data "aws_ami" "amazon_linux" {
   }
 }
 
-resource "aws_security_group" "allow_ssh" {
+resource "aws_security_group" "nginx" {
   name   = "nginx-security-group-${var.environment}"
   vpc_id = aws_vpc.main.id
 
